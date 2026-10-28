@@ -96,7 +96,7 @@ pub(crate) fn show(app: &mut VectorcraftApp, ctx: &egui::Context) {
             Status::Idle => (false, None),
             Status::Checking => (true, Some(tl!("Checking for updates…").to_string())),
             Status::UpToDate => {
-                (true, Some(tl!("VectorCraft {version} is currently the newest version available.").replace("{version}", env!("CARGO_PKG_VERSION"))))
+                (true, Some(tl!("STAR Vector {version} is currently the newest version available.").replace("{version}", env!("CARGO_PKG_VERSION"))))
             }
             Status::Failed(e) => (true, Some(tl!("Could not check for updates:\n{error}").replace("{error}", e))),
         };
@@ -104,7 +104,7 @@ pub(crate) fn show(app: &mut VectorcraftApp, ctx: &egui::Context) {
 
     if app.updates_rt.manual_window_open {
         let mut open = true;
-        egui::Window::new(tl!("VectorCraft Updates"))
+        egui::Window::new(tl!("STAR Vector Updates"))
             .open(&mut open)
             .collapsible(false)
             .resizable(false)

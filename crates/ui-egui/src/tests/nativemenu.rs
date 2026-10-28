@@ -94,7 +94,7 @@ fn vectorcraft_gets_a_mac_app_menu() {
         let it = find(&bar, command);
         (it.label.as_str(), it.shortcut)
     };
-    assert_eq!(shown("help.about"), ("About VectorCraft", None));
+    assert_eq!(shown("help.about"), ("About STAR Vector", None));
     assert_eq!(shown("app.quit"), ("Quit VectorCraft", Some("Cmd+Q")), "Quit is the app's own, so unsaved documents are asked about");
     // ⌘H stays View › Hide Edges (Illustrator's); Hide takes ⌃⌘H.
     assert_eq!(shown(native_menu::HIDE), ("Hide VectorCraft", Some("Ctrl+Cmd+H")));

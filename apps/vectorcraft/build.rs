@@ -13,10 +13,10 @@ fn main() -> Result<(), String> {
     }
     let mut res = winresource::WindowsResource::new();
     res.set_icon("../../assets/app-icon/vectorcraft.ico")
-        .set("ProductName", "VectorCraft")
-        .set("FileDescription", "VectorCraft vector illustration editor")
+        .set("ProductName", "STAR Vector")
+        .set("FileDescription", "STAR Vector - STAR7 Suite")
         .set("CompanyName", "Learning Machines LLC")
-        .set("LegalCopyright", "Copyright (c) the VectorCraft authors. MIT OR Apache-2.0.")
+        .set("LegalCopyright", "STAR7. Based on VectorCraft (c) its authors, MIT OR Apache-2.0.")
         .set("OriginalFilename", "vectorcraft.exe")
         .set("InternalName", "vectorcraft");
     if let Err(e) = res.compile() {
